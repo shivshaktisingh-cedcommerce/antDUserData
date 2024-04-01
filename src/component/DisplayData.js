@@ -31,7 +31,7 @@ const DisplayData = () =>{
         }
 
       const displayUserDetailsStyle = {
-        width: 400,
+        width: '100%',
         margin: 'auto',
         marginTop: 50,
         padding: 20,

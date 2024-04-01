@@ -21,13 +21,13 @@ const GeUserData = () =>{
         navigate('/redirect');
     }
 
-    const cardStyle={
-        width: 600,
-        margin: 'auto',
-        marginTop: 50,
-        padding: 20,
-        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-    }
+    const cardStyle = {
+      width: '60%',
+      margin: 'auto',
+      marginTop: 50,
+      padding: 20,
+      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    };
 
  
 
