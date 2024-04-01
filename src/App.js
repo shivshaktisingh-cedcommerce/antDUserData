@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+
+
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
+import GeUserData from "./component/GetUserData";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import DisplayData from "./component/DisplayData";
+import { useState } from "react";
+import Header from './component/Header';
+
+
+
+
+export default function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <Header/>
+      <Provider store={store}>
+      <BrowserRouter>
+       <Routes>
+           <Route path="/" element={<GeUserData />} />
+           <Route path="redirect" element={<DisplayData />} />
+           <Route path="*" element={<DisplayData />} />
+       </Routes>
+     </BrowserRouter>
+      </Provider>
+    </main>
   );
 }
-
-export default App;
